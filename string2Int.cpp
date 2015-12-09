@@ -25,8 +25,9 @@ public:
       }else if ( a[i] == '+') i++;
 
       for( ;i < a.length() ; i++){
+          if (a[i] == ' ') break;
+          if (a[i] < 'a' || a[i] >'z') break;
           result = result*10 + a[i] - '0';
-
           if( result > INT_MAX){
               break;
           }
