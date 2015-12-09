@@ -15,8 +15,8 @@ public:
 
         int num1 = i>= 0 ? a[i] - '0' : 0;
         int num2 = j>= 0 ? b[j] - '0' : 0;
-        int val = (num1 + num2 + carry)/2;
-        carry = (num1 + num2 + carry)%2;
+        int val = (num1 + num2 + carry)% 2;
+        carry = (num1 + num2 + carry)/ 2;
         result.insert( result.begin(), val + '0');
 
      }
