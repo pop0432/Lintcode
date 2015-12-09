@@ -13,13 +13,7 @@ public:
       long result = 0;
       bool negFlag = false;
 
-      while( i < a.length()){
-          if( a[i] != ' '){
-              break;
-          }else{
-            i++;
-          }
-      }
+      while( i < a.length() && a[i] == ' ') i++;
 
       if( i == a.length()){
           return 0;
@@ -28,9 +22,7 @@ public:
       if( a[i] == '-'){
           negFlag = true;
           i++;
-      }else if ( a[i] == '+'){
-          i++;
-      }
+      }else if ( a[i] == '+') i++;
 
       for( ;i < a.length() ; i++){
           result = result*10 + a[i] - '0';
